@@ -1,0 +1,200 @@
+
+print("=" * 60)
+print("Question 1: Student Grades List")
+print("=" * 60)
+
+# Create initial grades list
+grades = [85, 92, 78, 95, 88]
+
+# Add new grade
+grades.append(90)
+
+# Sort grades
+grades.sort()
+
+# Print results
+print(f"Sorted grades: {grades}")
+print(f"Highest grade: {grades[-1]}")
+print(f"Lowest grade: {grades[0]}")
+print(f"Total number of grades: {len(grades)}")
+
+print("\n" + "=" * 60)
+print("Question 2: Shopping Cart")
+print("=" * 60)
+
+# Create shopping cart
+cart = ["apple", "banana", "milk", "bread", "apple", "eggs"]
+
+# Count apples
+apple_count = cart.count("apple")
+print(f"Number of apples: {apple_count}")
+
+# Find position of milk
+milk_position = cart.index("milk")
+print(f"Position of milk: {milk_position}")
+
+# Remove one apple
+cart.remove("apple")
+
+# Remove last item using pop
+removed_item = cart.pop()
+print(f"Removed item using pop: {removed_item}")
+
+# Check if banana is in cart
+banana_in_cart = "banana" in cart
+print(f"Is banana in cart? {banana_in_cart}")
+
+# Print final cart
+print(f"Final cart: {cart}")
+
+print("\n" + "=" * 60)
+print("Question 3: Coordinate System")
+print("=" * 60)
+
+# Create tuples for points
+point1 = (3, 5)
+point2 = (7, 2)
+
+print(f"Point 1: {point1}")
+print(f"Point 2: {point2}")
+
+# Unpack tuples
+x1, y1 = point1
+x2, y2 = point2
+
+print(f"x1 = {x1}, y1 = {y1}")
+print(f"x2 = {x2}, y2 = {y2}")
+
+# Calculate distance
+distance = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+print(f"Distance between points: {distance}")
+
+# Create tuple from string
+chars_tuple = tuple("PYTHON")
+print(f"Characters tuple: {chars_tuple}")
+
+# Print each character
+for char in chars_tuple:
+    print(char)
+
+print("\n" + "=" * 60)
+print("Question 4: Class Attendance")
+print("=" * 60)
+
+# Create attendance sets
+monday_class = {"Alice", "Bob", "Charlie", "Diana"}
+wednesday_class = {"Bob", "Diana", "Eve", "Frank"}
+
+# Add Grace to Monday class
+monday_class.add("Grace")
+
+print(f"Monday class: {monday_class}")
+print(f"Wednesday class: {wednesday_class}")
+
+# Students who attended both classes
+both_classes = monday_class & wednesday_class
+print(f"Attended both classes: {both_classes}")
+
+# Students who attended either class
+either_class = monday_class | wednesday_class
+print(f"Attended either class: {either_class}")
+
+# Students who attended only Monday
+only_monday = monday_class - wednesday_class
+print(f"Only Monday: {only_monday}")
+
+# Students who attended only one class (symmetric difference)
+only_one = monday_class ^ wednesday_class
+print(f"Only one class (not both): {only_one}")
+
+# Check if Monday is subset of all students
+is_subset = monday_class <= either_class
+print(f"Is Monday subset of all students? {is_subset}")
+
+print("\n" + "=" * 60)
+print("Question 5: Contact Book")
+print("=" * 60)
+
+# Create contacts dictionary
+contacts = {
+    "Alice": "555-1234",
+    "Bob": "555-5678",
+    "Charlie": "555-9999"
+}
+
+# Print Alice's number
+print(f"Alice's number: {contacts['Alice']}")
+
+# Add Diana
+contacts["Diana"] = "555-4321"
+print(f"Contacts after adding Diana: {contacts}")
+
+# Update Bob's number
+contacts["Bob"] = "555-0000"
+print(f"Contacts after updating Bob: {contacts}")
+
+# Delete Charlie
+del contacts["Charlie"]
+print(f"Contacts after deleting Charlie: {contacts}")
+
+# Print all names
+print(f"All names: {contacts.keys()}")
+
+# Print all numbers
+print(f"All numbers: {contacts.values()}")
+
+# Print total contacts
+print(f"Total contacts: {len(contacts)}")
+
+print("\n" + "=" * 60)
+print("Question 6: Inventory Management System")
+print("=" * 60)
+
+# Create inventory dictionary
+inventory = {
+    "Laptop": (999.99, 5),
+    "Mouse": (29.99, 15),
+    "Keyboard": (79.99, 10),
+    "Monitor": (299.99, 8)
+}
+
+# Print current inventory
+print("\n=== Current Inventory ===")
+for product, (price, quantity) in inventory.items():
+    print(f"{product} - Price: ${price}, Quantity: {quantity}")
+
+# Create category sets
+electronics = {"Laptop", "Monitor"}
+accessories = {"Mouse", "Keyboard"}
+
+# Find all products using union
+all_categories = electronics | accessories
+print(f"\nAll product categories: {all_categories}")
+
+# Create price list
+price_list = [price for price, quantity in inventory.values()]
+print(f"\nPrice list: {price_list}")
+
+# Sort prices
+sorted_prices = sorted(price_list)
+print(f"Sorted prices: {sorted_prices}")
+print(f"Lowest price: ${sorted_prices[0]}")
+print(f"Highest price: ${sorted_prices[-1]}")
+
+# Add new product
+inventory["Headphones"] = (49.99, 20)
+
+# Update Mouse quantity
+inventory["Mouse"] = (29.99, 12)
+
+# Remove Monitor
+del inventory["Monitor"]
+
+# Print final inventory
+print("\n=== Final Inventory ===")
+for product, (price, quantity) in inventory.items():
+    print(f"{product} - Price: ${price}, Quantity: {quantity}")
+
+print("\n" + "=" * 60)
+print("Lab Complete!")
+print("=" * 60)
